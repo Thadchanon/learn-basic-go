@@ -45,7 +45,17 @@ func main() {
 		fmt.Printf("x power n is %g over limit %g.\n", v, lim)
 	}
 
+	switch today := "Saturday"; today {
+	case "Saturday":
+		fmt.Println("Today is Saturday")
+	case "Monday", "Tueday":
+		fmt.Println("Today is weekdays")
+	default:
+		fmt.Printf("Today is %v\n", today)
+	}
+
 	// workshops.PrintfWs() // for workshop 1
 	// workshops.PrintlnWs() // for workshop 2
 	// workshops.IfElse() // for workshop 3
+	// workshops.SwitchCase() // for workshop 4
 }
