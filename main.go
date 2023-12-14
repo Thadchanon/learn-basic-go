@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	// workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
+	workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
 )
 
 func main() {
@@ -52,10 +52,48 @@ func main() {
 		fmt.Println("Today is weekdays")
 	default:
 		fmt.Printf("Today is %v\n", today)
-	}
+	} 
 
 	// workshops.PrintfWs() // for workshop 1
 	// workshops.PrintlnWs() // for workshop 2
 	// workshops.IfElse() // for workshop 3
 	// workshops.SwitchCase() // for workshop 4
+	workshops.Function() // for workshop 5
+}
+
+var add func(float64, float64) float64 = func(x, y float64) float64 {
+	return x + y
+}
+
+/* func add(x, y float64) float64 {
+	return x + y
+} */
+
+func split(sum int) (x int, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+func compute(fn func(float64, float64) float64) float64 {
+	v := fn(42, 13)
+	return v
+}
+
+func hypot(x, y float64) float64 {
+	return math.Sqrt(x*y + y*x)
+}
+
+func adder() (func() int, func() int) {
+	sum := 0
+	return func() int {
+		sum = sum + 1
+		return sum
+	}, func() int {
+		return sum
+	}
 }
