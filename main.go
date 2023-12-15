@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
+	// workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
 )
 
 func main() {
@@ -58,7 +58,8 @@ func main() {
 	// workshops.PrintlnWs() // for workshop 2
 	// workshops.IfElse() // for workshop 3
 	// workshops.SwitchCase() // for workshop 4
-	workshops.Function() // for workshop 5
+	// workshops.Function() // for workshop 5
+	// workshops.Array() // for workshop 6
 }
 
 var add func(float64, float64) float64 = func(x, y float64) float64 {
