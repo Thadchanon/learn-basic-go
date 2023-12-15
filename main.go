@@ -21,7 +21,7 @@ func main() {
 	// fmt.Printf("type: %T -- rune: %#v\n", rn, rn)
 	// fmt.Printf("rune: %c\n", rn) // f = format, %c =  print character, \n = new line
 
-	num := 34
+/* 	num := 34
 
 	if num == 34 && (num > 30 || num < 39) {
 		fmt.Println("Yes!! it's Thirty four.")
@@ -52,7 +52,25 @@ func main() {
 		fmt.Println("Today is weekdays")
 	default:
 		fmt.Printf("Today is %v\n", today)
-	} 
+	}  */
+
+	sum := 0
+
+	for i := 0; i < 5; i++ {
+		sum += i
+		fmt.Println("i:", i, "sum:", sum)
+	}
+	fmt.Println("sum:", sum)
+
+	skills := [3]string{"js", "go", "python"}
+
+	for i := 0; i < len(skills); i++ {
+		fmt.Println(skills[i])
+	}
+	
+	for i := range skills {
+		fmt.Println(skills[i])
+	}
 
 	// workshops.PrintfWs() // for workshop 1
 	// workshops.PrintlnWs() // for workshop 2
@@ -60,6 +78,7 @@ func main() {
 	// workshops.SwitchCase() // for workshop 4
 	// workshops.Function() // for workshop 5
 	// workshops.Array() // for workshop 6
+	// workshops.For() // for workshop 7
 }
 
 var add func(float64, float64) float64 = func(x, y float64) float64 {
