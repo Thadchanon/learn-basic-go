@@ -21,56 +21,62 @@ func main() {
 	// fmt.Printf("type: %T -- rune: %#v\n", rn, rn)
 	// fmt.Printf("rune: %c\n", rn) // f = format, %c =  print character, \n = new line
 
-/* 	num := 34
+	/* 	num := 34
 
-	if num == 34 && (num > 30 || num < 39) {
-		fmt.Println("Yes!! it's Thirty four.")
-	} else if num == 35 {
-		fmt.Println("It's Thirty five.")
-	} else {
-		fmt.Println("No!! it's not Thirty four.")
-	}
+	   	if num == 34 && (num > 30 || num < 39) {
+	   		fmt.Println("Yes!! it's Thirty four.")
+	   	} else if num == 35 {
+	   		fmt.Println("It's Thirty five.")
+	   	} else {
+	   		fmt.Println("No!! it's not Thirty four.")
+	   	}
 
-	if num%2 == 0 {
-		fmt.Println("It's even number.")
-	} else {
-		fmt.Println("It's odd number.")
-	}
+	   	if num%2 == 0 {
+	   		fmt.Println("It's even number.")
+	   	} else {
+	   		fmt.Println("It's odd number.")
+	   	}
 
-	lim := 225.0
+	   	lim := 225.0
 
-	if v := math.Pow(30, 2); v < lim { // Pow uses calculations using exponents, v scope in if
-		fmt.Println("x power n is:", v)
-	} else {
-		fmt.Printf("x power n is %g over limit %g.\n", v, lim)
-	}
+	   	if v := math.Pow(30, 2); v < lim { // Pow uses calculations using exponents, v scope in if
+	   		fmt.Println("x power n is:", v)
+	   	} else {
+	   		fmt.Printf("x power n is %g over limit %g.\n", v, lim)
+	   	}
 
-	switch today := "Saturday"; today {
-	case "Saturday":
-		fmt.Println("Today is Saturday")
-	case "Monday", "Tueday":
-		fmt.Println("Today is weekdays")
-	default:
-		fmt.Printf("Today is %v\n", today)
-	}  */
+	   	switch today := "Saturday"; today {
+	   	case "Saturday":
+	   		fmt.Println("Today is Saturday")
+	   	case "Monday", "Tueday":
+	   		fmt.Println("Today is weekdays")
+	   	default:
+	   		fmt.Printf("Today is %v\n", today)
+	   	}  */
 
-	sum := 0
+	/* 	sum := 0
 
-	for i := 0; i < 5; i++ {
-		sum += i
-		fmt.Println("i:", i, "sum:", sum)
-	}
-	fmt.Println("sum:", sum)
+	   	for i := 0; i < 5; i++ {
+	   		sum += i
+	   		fmt.Println("i:", i, "sum:", sum)
+	   	}
+	   	fmt.Println("sum:", sum)
 
-	skills := [3]string{"js", "go", "python"}
+	   	skills := [3]string{"js", "go", "python"}
 
-	for i := 0; i < len(skills); i++ {
-		fmt.Println(skills[i])
-	}
-	
-	for i := range skills {
-		fmt.Println(skills[i])
-	}
+	   	for i := 0; i < len(skills); i++ {
+	   		fmt.Println(skills[i])
+	   	}
+
+	   	for i := range skills {
+	   		fmt.Println(skills[i])
+	   	} */
+
+	skills := []string{"js", "go", "python"}
+	fmt.Printf("length: %d -- val;%#v\n", len(skills), skills)
+
+	skills = append(skills, "ruby")
+	fmt.Printf("length: %d -- val;%#v\n", len(skills), skills)
 
 	// workshops.PrintfWs() // for workshop 1
 	// workshops.PrintlnWs() // for workshop 2
@@ -79,6 +85,7 @@ func main() {
 	// workshops.Function() // for workshop 5
 	// workshops.Array() // for workshop 6
 	// workshops.For() // for workshop 7
+	// workshops.Slice() // for workshop 8
 }
 
 var add func(float64, float64) float64 = func(x, y float64) float64 {
@@ -111,9 +118,9 @@ func hypot(x, y float64) float64 {
 func adder() (func() int, func() int) {
 	sum := 0
 	return func() int {
-		sum = sum + 1
-		return sum
-	}, func() int {
-		return sum
-	}
+			sum = sum + 1
+			return sum
+		}, func() int {
+			return sum
+		}
 }
