@@ -86,6 +86,7 @@ func main() {
 	// workshops.Array() // for workshop 6
 	// workshops.For() // for workshop 7
 	// workshops.Slice() // for workshop 8
+	// workshops.Struct() // for workshop 9
 }
 
 var add func(float64, float64) float64 = func(x, y float64) float64 {
