@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
-	// workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
+
+	workshops "github.com/Thadchanon/learn-basic-go/workshops" // for workshops
 )
 
 func main() {
@@ -89,6 +90,7 @@ func main() {
 	// workshops.Struct() // for workshop 9
 	// workshops.Method() // for workshop 10
 	// workshops.Pointer() // for workshop 11
+	workshops.Interface() // for workshop 12
 }
 
 var add func(float64, float64) float64 = func(x, y float64) float64 {
