@@ -6,11 +6,11 @@ import (
 )
 
 type movie4 struct {
-	Title       string
-	Year        int
-	Rating      float32
-	Genres      []string
-	IsSuperHero bool
+	Title       string   `json:"title"`
+	Year        int      `json:"year"`
+	Rating      float32  `json:"rating"`
+	Genres      []string `json:"genres"`
+	IsSuperHero bool     `json:"isSuperHero"`
 }
 
 func Json() {
